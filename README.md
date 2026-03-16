@@ -109,7 +109,7 @@ CFG = {
     "OUROBOROS_MODEL_LIGHT": "google/gemini-2.5-flash-preview",  # consciousness + lightweight tasks - FREE
     "OUROBOROS_WEBSEARCH_MODEL": "gpt-5",                        # web search (OpenAI Responses API)
     # Fallback chain (first model != active will be used on empty response)
-    "OUROBOROS_MODEL_FALLBACK_LIST": "google/gemini-2.5-flash-preview,google/gemini-2.5-flash-preview",
+    "OUROBOROS_MODEL_FALLBACK_LIST": "google/gemini-2.5-flash-preview,meta-llama/llama-4-scout",
     # Infrastructure
     "OUROBOROS_MAX_WORKERS": "5",
     "OUROBOROS_MAX_ROUNDS": "200",                               # max LLM rounds per task
@@ -204,7 +204,7 @@ Full text: [BIBLE.md](BIBLE.md)
 | `OUROBOROS_MAX_WORKERS` | `5` | Maximum number of parallel worker processes |
 | `OUROBOROS_BG_BUDGET_PCT` | `10` | Percentage of total budget allocated to background consciousness |
 | `OUROBOROS_MAX_ROUNDS` | `200` | Maximum LLM rounds per task |
-| `OUROBOROS_MODEL_FALLBACK_LIST` | `google/gemini-2.5-flash-preview,google/gemini-2.5-flash-preview` | Fallback model chain for empty responses - FREE |
+| `OUROBOROS_MODEL_FALLBACK_LIST` | `google/gemini-2.5-flash-preview,meta-llama/llama-4-scout` | Fallback model chain for empty responses - FREE |
 
 ---
 
