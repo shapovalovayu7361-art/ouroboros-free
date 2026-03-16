@@ -20,7 +20,7 @@ from ouroboros.tools.registry import ToolContext, ToolEntry
 
 log = logging.getLogger(__name__)
 
-_DEFAULT_VLM_MODEL = "google/gemini-2.5-flash-preview"
+_DEFAULT_VLM_MODEL = "qwen/qwen3-next-80b-a3b-instruct:free"
 
 
 def _get_vlm_model() -> str:

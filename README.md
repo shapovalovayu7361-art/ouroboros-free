@@ -104,12 +104,12 @@ CFG = {
     "GITHUB_USER": "YOUR_GITHUB_USERNAME",                       # <-- CHANGE THIS
     "GITHUB_REPO": "ouroboros",                                  # <-- repo name (after fork)
     # Models
-    "OUROBOROS_MODEL": "google/gemini-2.5-flash-preview",        # primary LLM (via OpenRouter) - FREE
-    "OUROBOROS_MODEL_CODE": "google/gemini-2.5-flash-preview",   # code editing (Claude Code CLI) - FREE
-    "OUROBOROS_MODEL_LIGHT": "google/gemini-2.5-flash-preview",  # consciousness + lightweight tasks - FREE
+    "OUROBOROS_MODEL": "qwen/qwen3-next-80b-a3b-instruct:free",        # primary LLM (via OpenRouter) - FREE
+    "OUROBOROS_MODEL_CODE": "qwen/qwen3-next-80b-a3b-instruct:free",   # code editing (Claude Code CLI) - FREE
+    "OUROBOROS_MODEL_LIGHT": "qwen/qwen3-next-80b-a3b-instruct:free",  # consciousness + lightweight tasks - FREE
     "OUROBOROS_WEBSEARCH_MODEL": "gpt-5",                        # web search (OpenAI Responses API)
     # Fallback chain (first model != active will be used on empty response)
-    "OUROBOROS_MODEL_FALLBACK_LIST": "google/gemini-2.5-flash-preview,meta-llama/llama-4-scout",
+    "OUROBOROS_MODEL_FALLBACK_LIST": "qwen/qwen3-next-80b-a3b-instruct:free,qwen/qwen3-next-80b-a3b-instruct:free",
     # Infrastructure
     "OUROBOROS_MAX_WORKERS": "5",
     "OUROBOROS_MAX_ROUNDS": "200",                               # max LLM rounds per task
@@ -197,14 +197,14 @@ Full text: [BIBLE.md](BIBLE.md)
 |----------|---------|-------------|
 | `GITHUB_USER` | *(required in config cell)* | GitHub username |
 | `GITHUB_REPO` | `ouroboros` | GitHub repository name |
-| `OUROBOROS_MODEL` | `google/gemini-2.5-flash-preview` | Primary LLM model (via OpenRouter) - FREE |
-| `OUROBOROS_MODEL_CODE` | `google/gemini-2.5-flash-preview` | Model for code editing tasks - FREE |
-| `OUROBOROS_MODEL_LIGHT` | `google/gemini-2.5-flash-preview` | Model for lightweight tasks (dedup, compaction) - FREE |
+| `OUROBOROS_MODEL` | `qwen/qwen3-next-80b-a3b-instruct:free` | Primary LLM model (via OpenRouter) - FREE |
+| `OUROBOROS_MODEL_CODE` | `qwen/qwen3-next-80b-a3b-instruct:free` | Model for code editing tasks - FREE |
+| `OUROBOROS_MODEL_LIGHT` | `qwen/qwen3-next-80b-a3b-instruct:free` | Model for lightweight tasks (dedup, compaction) - FREE |
 | `OUROBOROS_WEBSEARCH_MODEL` | `gpt-5` | Model for web search (OpenAI Responses API) |
 | `OUROBOROS_MAX_WORKERS` | `5` | Maximum number of parallel worker processes |
 | `OUROBOROS_BG_BUDGET_PCT` | `10` | Percentage of total budget allocated to background consciousness |
 | `OUROBOROS_MAX_ROUNDS` | `200` | Maximum LLM rounds per task |
-| `OUROBOROS_MODEL_FALLBACK_LIST` | `google/gemini-2.5-flash-preview,meta-llama/llama-4-scout` | Fallback model chain for empty responses - FREE |
+| `OUROBOROS_MODEL_FALLBACK_LIST` | `qwen/qwen3-next-80b-a3b-instruct:free,qwen/qwen3-next-80b-a3b-instruct:free` | Fallback model chain for empty responses - FREE |
 
 ---
 

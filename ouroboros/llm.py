@@ -14,7 +14,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 log = logging.getLogger(__name__)
 
-DEFAULT_LIGHT_MODEL = "google/gemini-2.5-flash-preview"
+DEFAULT_LIGHT_MODEL = "qwen/qwen3-next-80b-a3b-instruct:free"
 
 
 def normalize_reasoning_effort(value: str, default: str = "medium") -> str:
@@ -231,7 +231,7 @@ class LLMClient:
         self,
         prompt: str,
         images: List[Dict[str, Any]],
-        model: str = "google/gemini-2.5-flash-preview",
+        model: str = "qwen/qwen3-next-80b-a3b-instruct:free",
         max_tokens: int = 1024,
         reasoning_effort: str = "low",
     ) -> Tuple[str, Dict[str, Any]]:
@@ -280,13 +280,13 @@ class LLMClient:
 
     def default_model(self) -> str:
         """Return the single default model from env. LLM switches via tool if needed."""
-        return os.environ.get("OUROBOROS_MODEL", "google/gemini-2.5-flash-preview")
+        return os.environ.get("OUROBOROS_MODEL", "qwen/qwen3-next-80b-a3b-instruct:free")
 
     def available_models(self) -> List[str]:
         """Return list of available models from env (for switch_model tool schema)."""
-        main = os.environ.get("OUROBOROS_MODEL", "google/gemini-2.5-flash-preview")
-        code = os.environ.get("OUROBOROS_MODEL_CODE", "google/gemini-2.5-flash-preview")
-        light = os.environ.get("OUROBOROS_MODEL_LIGHT", "google/gemini-2.5-flash-preview")
+        main = os.environ.get("OUROBOROS_MODEL", "qwen/qwen3-next-80b-a3b-instruct:free")
+        code = os.environ.get("OUROBOROS_MODEL_CODE", "qwen/qwen3-next-80b-a3b-instruct:free")
+        light = os.environ.get("OUROBOROS_MODEL_LIGHT", "qwen/qwen3-next-80b-a3b-instruct:free")
         models = [main]
         if code and code != main:
             models.append(code)
